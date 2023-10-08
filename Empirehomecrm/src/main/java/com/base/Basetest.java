@@ -15,6 +15,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Basetest {
 
 	public static Properties prop;
