@@ -1,5 +1,7 @@
 package com.testcases;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -34,7 +36,7 @@ public class Logintest extends Basetest {
 	public void verifyLogin() {
 		Login.verifyLogin();
 		String urltest = driver.getCurrentUrl();
-		Assert.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/EmpireHome/Dashboard");
+		AssertJUnit.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/EmpireHome/Dashboard");
 		
 
 	}

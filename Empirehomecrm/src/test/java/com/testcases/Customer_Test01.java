@@ -1,5 +1,7 @@
 package com.testcases;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 
 import org.testng.annotations.AfterMethod;
@@ -36,7 +38,7 @@ public class Customer_Test01 extends Basetest {
 		Customer.Customervalidation();
 
 		String urltest = driver.getCurrentUrl();
-		Assert.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/User/CustomerList");
+		AssertJUnit.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/User/CustomerList");
 
 	}
 

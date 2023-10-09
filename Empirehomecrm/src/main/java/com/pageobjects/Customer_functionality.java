@@ -76,6 +76,7 @@ public class Customer_functionality extends Basetest {
 		EnterEmailId.sendKeys(prop.getProperty("REEnterEmailId"));
 		EnterWhatsappNumber.clear();
 		EnterWhatsappNumber.sendKeys(prop.getProperty("REEnterWhatsappNumber"));
+		Thread.sleep(2000);
 		clickSave.click();
 		Thread.sleep(2000);
 		Delate.click();

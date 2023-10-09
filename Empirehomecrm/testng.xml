@@ -4,7 +4,11 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="com.testcases.Logintest"/>
+      <class name="com.testcases.Stock_Move_Test"/>
+      <class name="com.testcases.Usertype_Test"/>
       <class name="com.testcases.Add_Product_Inventory_test"/>
+      <class name="com.testcases.Login_functionality_Test"/>
+      <class name="com.testcases.Customer_Test01"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
