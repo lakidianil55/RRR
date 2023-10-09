@@ -7,16 +7,15 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.base.Basetest;
+import com.pageobjects.Customer_functionality;
 import com.pageobjects.LoginPage;
 
-import com.pageobjects.Usertype_functionality;
-
-public class Usertype_Test extends Basetest {
+public class Customer_Test extends Basetest {
 
 	LoginPage Login;
-	Usertype_functionality Usertype;
+	Customer_functionality Customer;
 
-	public Usertype_Test() {
+	public Customer_Test() {
 		super();
 	}
 
@@ -26,17 +25,17 @@ public class Usertype_Test extends Basetest {
 		initialization();
 
 		Login = new LoginPage();
-		Usertype = new Usertype_functionality();
+		Customer = new Customer_functionality();
 	}
 
 	@Test
 
-	public void loginvalidation() throws Throwable {
+	public void verifyCustomer() throws Throwable {
 		Login.verifyLogin();
-		Usertype.Stockmoveverify();
+		Customer.verifyCustomer();
 
 		String urltest = driver.getCurrentUrl();
-		Assert.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/Master/Usertypes");
+		Assert.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/User/CustomerList");
 
 	}
 

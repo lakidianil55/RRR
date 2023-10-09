@@ -2,9 +2,10 @@ package com.pageobjects;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+
 
 import com.base.Basetest;
+
 
 public class Loginfunctionality extends Basetest {
 
@@ -18,16 +19,17 @@ public class Loginfunctionality extends Basetest {
    @FindBy (xpath="//button[text()='Login']")
    WebElement loginbutton;
    
-   public Loginfunctionality() {           //constructor
-	   
-	   PageFactory.initElements(driver,this);
-   }
-   
+   public Loginfunctionality() {
+		super();
+	}
+
+	
+
    
    public void verifylogin() {
 	   
-	  userid.sendKeys(prop.getProperty("username")); 
-	   pass.sendKeys(prop.getProperty("password"));
+	  userid.sendKeys(("username")); 
+	   pass.sendKeys(("password"));
 	   loginbutton.click();
    }
    

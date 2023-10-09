@@ -65,7 +65,7 @@ public class Usertype_functionality extends Basetest {
 		Thread.sleep(2000);
 		clickSave.click();
 		search.sendKeys(prop.getProperty("search"));
-		
+
 		Actions a = new Actions(driver);
 		Thread.sleep(2000);
 		a.moveToElement(clickedit).click().build().perform();
