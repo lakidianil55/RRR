@@ -19,10 +19,10 @@ public class Customer_functionality extends Basetest {
 
 	@FindBy(xpath = "//input[@placeholder='Enter Customer Name']")
 	WebElement EnterCustomerName;
-	
+
 	@FindBy(xpath = "//input[@placeholder='Enter Mobile Number']")
 	WebElement EnterMobileNumber;
-	//input[@placeholder='Enter Mobile Number']
+
 	@FindBy(xpath = "//input[@placeholder='Enter Email Id']")
 	WebElement EnterEmailId;
 
@@ -31,34 +31,56 @@ public class Customer_functionality extends Basetest {
 
 	@FindBy(xpath = "//button[normalize-space()='Save']")
 	WebElement clickSave;
-	
 
 	@FindBy(xpath = "//input[@class='form-control form-control-sm']")
-	WebElement clicksearch;
-	
+	WebElement search;
+
+	@FindBy(xpath = "//tbody/tr[1]/td[11]/a[1]/button[1]")
+	WebElement Edit;
+
+	@FindBy(xpath = "//tbody/tr[1]/td[11]/a[3]/button[1]/i[1]")
+	WebElement Delate;
+
+	@FindBy(xpath = "//button[@class='swal-button swal-button--yes']")
+	WebElement clickyes;
 
 	public Customer_functionality() {
 		PageFactory.initElements(driver, this);
 
 	}
 
-	public void verifyCustomer() throws Throwable {
-		Thread.sleep(1000);
+	public void Customervalidation() throws Throwable {
+		Thread.sleep(2000);
 		clickkeypad.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		clickCustomers.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		clickAddCustomer.click();
-		Thread.sleep(1000);
-		EnterCustomerName.sendKeys(prop.getProperty("CustomerName"));
-		Thread.sleep(1000);
+		Thread.sleep(2000);
+		EnterCustomerName.sendKeys(prop.getProperty("EnterCustomerName"));
+		Thread.sleep(2000);
 		EnterMobileNumber.sendKeys(prop.getProperty("EnterMobileNumber"));
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		EnterEmailId.sendKeys(prop.getProperty("EnterEmailId"));
-		Thread.sleep(1000);
 		EnterWhatsappNumber.sendKeys(prop.getProperty("EnterWhatsappNumber"));
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		clickSave.click();
-		clicksearch.sendKeys(prop.getProperty("Customersearch"));
+		Thread.sleep(2000);
+		search.sendKeys(prop.getProperty("CustomerSearch"));
+		Edit.click();
+		EnterCustomerName.clear();
+		EnterCustomerName.sendKeys(prop.getProperty("REEnterCustomerName"));
+		EnterMobileNumber.clear();
+		EnterMobileNumber.sendKeys(prop.getProperty("REEnterMobileNumber"));
+		EnterEmailId.clear();
+		EnterEmailId.sendKeys(prop.getProperty("REEnterEmailId"));
+		EnterWhatsappNumber.clear();
+		EnterWhatsappNumber.sendKeys(prop.getProperty("REEnterWhatsappNumber"));
+		clickSave.click();
+		Thread.sleep(2000);
+		Delate.click();
+		Thread.sleep(2000);
+		clickyes.click();
 	}
+
 }
