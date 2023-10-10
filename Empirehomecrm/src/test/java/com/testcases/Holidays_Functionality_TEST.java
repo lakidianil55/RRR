@@ -4,23 +4,19 @@ import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
-import org.testng.Assert;
-
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
 import com.base.Basetest;
+import com.pageobjects.Holidays_Functionality;
 import com.pageobjects.LoginPage;
 
-import com.pageobjects.Stock_move_Functionality;
-
-public class Stock_Move_Test extends Basetest {
+public class Holidays_Functionality_TEST extends Basetest {
 
 	LoginPage Login;
-	Stock_move_Functionality Stock;
+	Holidays_Functionality Holidays;
 
-	public Stock_Move_Test() {
+	public Holidays_Functionality_TEST() {
 		super();
 	}
 
@@ -30,17 +26,17 @@ public class Stock_Move_Test extends Basetest {
 		initialization();
 
 		Login = new LoginPage();
-		Stock = new Stock_move_Functionality();
+		Holidays = new Holidays_Functionality();
 	}
 
 	@Test
 
-	public void loginvalidation() throws Throwable {
+	public void Holidaysvalidation() throws Throwable {
 		Login.verifyLogin();
-		Stock.Stockmoveverify();
+		Holidays.Holidaysverify();
 
 		String urltest = driver.getCurrentUrl();
-		AssertJUnit.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/Inventory/StockMovement");
+		AssertJUnit.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/Master/Holidays");
 
 	}
 
