@@ -76,7 +76,7 @@ public class Stock_move_Functionality extends Basetest {
 
 		Thread.sleep(2000);
 		Robot r = new Robot();
-		textbox.sendKeys(prop.getProperty("textbox"));
+		textbox.sendKeys(prop.getProperty("textbox2"));
 		r.keyPress(KeyEvent.VK_ENTER);
 		r.keyRelease(KeyEvent.VK_ENTER);
 
@@ -110,7 +110,7 @@ public class Stock_move_Functionality extends Basetest {
 		clickinvIdcontainer.click();
 
 		Thread.sleep(2000);
-		textbox.sendKeys(prop.getProperty("textbox"));
+		textbox.sendKeys(prop.getProperty("textbox1"));
 		r.keyPress(KeyEvent.VK_ENTER);
 		r.keyRelease(KeyEvent.VK_ENTER);
 
